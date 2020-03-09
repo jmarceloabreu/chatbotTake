@@ -23,7 +23,7 @@ public class ChatBotServicoImpl implements ChatBotServico {
 
     public List<RepositoriosTakeDTO> buscaRepositoriosTake (HttpServletRequest httpServletRequest) {
         HttpHeaders headers = new HttpHeaders();
-        headers.set("User-Agent", httpServletRequest.getHeader("User-Agent"));
+        headers.set("Authorization", httpServletRequest.getHeader("Authorization"));
         HttpEntity entity = new HttpEntity(headers);
         ResponseEntity<RepositoriosTakeDTO[]> response = restTemplate.exchange("https://api.github.com/orgs/takenet/repos", HttpMethod.GET, entity, RepositoriosTakeDTO[].class);
         List<RepositoriosTakeDTO> list = Arrays.asList(response.getBody());

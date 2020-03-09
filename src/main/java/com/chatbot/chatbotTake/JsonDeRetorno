@@ -1,0 +1,67 @@
+[
+  {
+"id": 13860708,
+"language": "C#",
+"name": "library.data",
+"description": "Provides a simple abstraction for implementing the repository and unit of work patterns for data-enabled applications",
+"created_at": "2013-10-25T13:04:51Z",
+"owner": {
+"login": "takenet",
+"id": 4369522,
+"avatarUrl": "https://avatars3.githubusercontent.com/u/4369522?v=4",
+"url": "https://api.github.com/users/takenet"
+}
+},
+  {
+"id": 13864228,
+"language": "C#",
+"name": "library.logging",
+"description": "Provides a simple logging interface for applications and some basic implementations of this interface",
+"created_at": "2013-10-25T15:18:07Z",
+"owner": {
+"login": "takenet",
+"id": 4369522,
+"avatarUrl": "https://avatars3.githubusercontent.com/u/4369522?v=4",
+"url": "https://api.github.com/users/takenet"
+}
+},
+  {
+"id": 14797019,
+"language": "C#",
+"name": "libphonenumber-csharp",
+"description": "Forking original c# port",
+"created_at": "2013-11-29T09:16:51Z",
+"owner": {
+"login": "takenet",
+"id": 4369522,
+"avatarUrl": "https://avatars3.githubusercontent.com/u/4369522?v=4",
+"url": "https://api.github.com/users/takenet"
+}
+},
+  {
+"id": 15866473,
+"language": "C#",
+"name": "Takenet.Radar",
+"description": "Radar de tecnologias takenet",
+"created_at": "2014-01-13T11:38:38Z",
+"owner": {
+"login": "takenet",
+"id": 4369522,
+"avatarUrl": "https://avatars3.githubusercontent.com/u/4369522?v=4",
+"url": "https://api.github.com/users/takenet"
+}
+},
+  {
+"id": 16308759,
+"language": "C#",
+"name": "Takenet.ScoreSystem",
+"description": "Takenet score system",
+"created_at": "2014-01-28T10:31:10Z",
+"owner": {
+"login": "takenet",
+"id": 4369522,
+"avatarUrl": "https://avatars3.githubusercontent.com/u/4369522?v=4",
+"url": "https://api.github.com/users/takenet"
+}
+}
+],
