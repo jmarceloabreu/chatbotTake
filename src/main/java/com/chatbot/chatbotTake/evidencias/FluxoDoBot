@@ -1,0 +1,502 @@
+{
+  "onboarding": {
+    "$contentActions": [
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "e224ce74-5970-4274-aff4-abde02731ecd",
+              "type": "text/plain",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": false,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$$hashKey": "object:646",
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "fbbe4443-932a-4534-8707-8ca24021d451",
+        "$connId": "con_3",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "exists",
+            "values": [],
+            "$$hashKey": "object:12798"
+          }
+        ],
+        "$invalid": false,
+        "$$hashKey": "object:12789"
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "fallback",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "onboarding",
+    "root": true,
+    "$position": {
+      "top": "37px",
+      "left": "499px"
+    },
+    "$title": "Início",
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "fallback": {
+    "$contentActions": [
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "7fc8a746-55a1-41ed-b723-3f86aff76db6",
+              "type": "text/plain"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [
+      {
+        "stateId": "error",
+        "conditions": [
+          {
+            "source": "input",
+            "comparison": "matches",
+            "values": [
+              ".*"
+            ]
+          }
+        ],
+        "$connId": "con_8",
+        "$invalid": false
+      }
+    ],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "onboarding",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "fallback",
+    "$position": {
+      "top": "120px",
+      "left": "877px"
+    },
+    "$title": "Exceções",
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "error": {
+    "$contentActions": [
+      {
+        "action": {
+          "type": "SendMessage",
+          "settings": {
+            "id": "00000000-0000-0000-0000-000000000002",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "00000000-0000-0000-0000-000000000002",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left",
+            "editing": false
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "action": {
+          "type": "SendMessage",
+          "settings": {
+            "id": "00000000-0000-0000-0000-000000000003",
+            "type": "text/plain",
+            "content": "Desculpe, não consegui entender!"
+          },
+          "$cardContent": {
+            "document": {
+              "id": "00000000-0000-0000-0000-000000000003",
+              "type": "text/plain",
+              "content": "Desculpe, não consegui entender!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left",
+            "editing": false
+          }
+        },
+        "$invalid": false
+      },
+      {
+        "input": {
+          "bypass": true,
+          "$cardContent": {
+            "document": {
+              "id": "2065c6f6-1c43-41db-ad2e-16d81b1c8537",
+              "type": "text/plain"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [],
+    "$enteringCustomActions": [],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "onboarding",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "error",
+    "$position": {
+      "top": "240px",
+      "left": "877px"
+    },
+    "$title": "Erro padrão",
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  },
+  "fbbe4443-932a-4534-8707-8ca24021d451": {
+    "$contentActions": [
+      {
+        "action": {
+          "type": "SendMessage",
+          "settings": {
+            "id": "4c836e38-bc7d-4c4f-9029-234f421079d8",
+            "type": "text/plain",
+            "content": "Olá! {{contact.name}}!\nSeja bem-vindo(a)!"
+          },
+          "$cardContent": {
+            "document": {
+              "id": "4c836e38-bc7d-4c4f-9029-234f421079d8",
+              "type": "text/plain",
+              "content": "Olá! {{contact.name}}!\nSeja bem-vindo(a)!"
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false,
+        "$$hashKey": "object:10157"
+      },
+      {
+        "action": {
+          "type": "SendMessage",
+          "settings": {
+            "id": "1b306d31-3e64-4c5d-93f4-f9a1ba8395ac",
+            "type": "application/vnd.lime.chatstate+json",
+            "content": {
+              "state": "composing",
+              "interval": 1000
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "1b306d31-3e64-4c5d-93f4-f9a1ba8395ac",
+              "type": "application/vnd.lime.chatstate+json",
+              "content": {
+                "state": "composing",
+                "interval": 1000
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false,
+        "$$hashKey": "object:10419"
+      },
+      {
+        "action": {
+          "type": "SendMessage",
+          "settings": {
+            "id": "6a092707-8d50-43ad-9216-2d614db37fc4",
+            "type": "application/vnd.lime.collection+json",
+            "content": {
+              "itemType": "application/vnd.lime.document-select+json",
+              "items": [
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response[0]@name}}",
+                      "text": "{{response[0]@description}}",
+                      "type": "image/jpeg",
+                      "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "id": 0,
+                  "editing": false
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response[1]@name}}",
+                      "text": "{{response[1]@description}}",
+                      "type": "image/jpeg",
+                      "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "id": 1,
+                  "editing": false
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response[2]@name}}",
+                      "text": "{{response[2]@description}}",
+                      "type": "image/jpeg",
+                      "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "editing": false,
+                  "id": 2
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response[3]@name}}",
+                      "text": "{{response[3]@description}}",
+                      "type": "image/jpeg",
+                      "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "editing": false,
+                  "id": 3
+                },
+                {
+                  "header": {
+                    "type": "application/vnd.lime.media-link+json",
+                    "value": {
+                      "title": "{{response[4]@name}}",
+                      "text": "{{response[4]@description}}",
+                      "type": "image/jpeg",
+                      "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                      "aspectRatio": "2:1"
+                    }
+                  },
+                  "options": [],
+                  "editing": false,
+                  "id": 4
+                }
+              ]
+            }
+          },
+          "$cardContent": {
+            "document": {
+              "id": "6a092707-8d50-43ad-9216-2d614db37fc4",
+              "type": "application/vnd.lime.collection+json",
+              "content": {
+                "itemType": "application/vnd.lime.document-select+json",
+                "items": [
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response[0]@name}}",
+                        "text": "{{response[0]@description}}",
+                        "type": "image/jpeg",
+                        "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "id": 0,
+                    "editing": false
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response[1]@name}}",
+                        "text": "{{response[1]@description}}",
+                        "type": "image/jpeg",
+                        "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "id": 1,
+                    "editing": false
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response[2]@name}}",
+                        "text": "{{response[2]@description}}",
+                        "type": "image/jpeg",
+                        "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "editing": false,
+                    "id": 2
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response[3]@name}}",
+                        "text": "{{response[3]@description}}",
+                        "type": "image/jpeg",
+                        "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "editing": false,
+                    "id": 3
+                  },
+                  {
+                    "header": {
+                      "type": "application/vnd.lime.media-link+json",
+                      "value": {
+                        "title": "{{response[4]@name}}",
+                        "text": "{{response[4]@description}}",
+                        "type": "image/jpeg",
+                        "uri": "https://avatars1.githubusercontent.com/u/4369522?s=200&v=4",
+                        "aspectRatio": "2:1"
+                      }
+                    },
+                    "options": [],
+                    "editing": false,
+                    "id": 4
+                  }
+                ]
+              }
+            },
+            "editable": true,
+            "deletable": true,
+            "position": "left"
+          }
+        },
+        "$invalid": false,
+        "$$hashKey": "object:10420"
+      },
+      {
+        "input": {
+          "bypass": false,
+          "$cardContent": {
+            "document": {
+              "id": "1972994c-5e3d-473f-a376-b80aba2eb96e",
+              "type": "text/plain",
+              "textContent": "Entrada do usuário",
+              "content": "Entrada do usuário"
+            },
+            "editable": false,
+            "deletable": true,
+            "position": "right",
+            "editing": false
+          },
+          "$invalid": false
+        },
+        "$$hashKey": "object:866",
+        "$invalid": false
+      }
+    ],
+    "$conditionOutputs": [],
+    "$enteringCustomActions": [
+      {
+        "type": "ProcessHttp",
+        "$title": "Requisição HTTP",
+        "$invalid": false,
+        "settings": {
+          "headers": {
+            "Authorization": "Key am9hb21hcmNlbG9hYnJldTpyN0tRSzd0YlhsUFV1MmdISHhRRg=="
+          },
+          "method": "GET",
+          "uri": "http://localhost:8080/api/repositories",
+          "responseBodyVariable": "response",
+          "body": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\"\n}\n            "
+        },
+        "conditions": [
+          {
+            "$$hashKey": "object:5220",
+            "source": "input",
+            "comparison": "exists",
+            "values": []
+          }
+        ]
+      }
+    ],
+    "$leavingCustomActions": [],
+    "$inputSuggestions": [],
+    "$defaultOutput": {
+      "stateId": "fbbe4443-932a-4534-8707-8ca24021d451",
+      "$invalid": false
+    },
+    "$tags": [],
+    "id": "fbbe4443-932a-4534-8707-8ca24021d451",
+    "root": false,
+    "$title": "Carroussel",
+    "$position": {
+      "top": "250px",
+      "left": "554px"
+    },
+    "$invalidContentActions": false,
+    "$invalidOutputs": false,
+    "$invalidCustomActions": false,
+    "$invalid": false
+  }
+}
